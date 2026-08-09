@@ -1,0 +1,11 @@
+.vercel
+node_modules
+dist
+.vs
+
+# Arquivos locais do sistema
+Thumbs.db
+Desktop.ini
+
+# Logs
+*.log

@@ -1,0 +1,10 @@
+{
+  "name": "weltec3d-site",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Site publico da Weltec3D Solucoes em Detalhamento.",
+  "scripts": {
+    "build": "node scripts/build-site.js",
+    "start": "node server.js"
+  }
+}
