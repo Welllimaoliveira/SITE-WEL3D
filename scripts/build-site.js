@@ -3,6 +3,7 @@ const path = require("path");
 
 const root = path.resolve(__dirname, "..");
 const dist = path.join(root, "dist");
+const publicDir = path.join(root, "public");
 
 const publicFiles = [
   "index.html",
@@ -12,18 +13,20 @@ const publicFiles = [
   "ecossistema.css"
 ];
 
-fs.rmSync(dist, { recursive: true, force: true });
-fs.mkdirSync(dist, { recursive: true });
+for (const directory of [dist, publicDir]) {
+  fs.rmSync(directory, { recursive: true, force: true });
+  fs.mkdirSync(directory, { recursive: true });
+}
 
 for (const file of publicFiles) {
   const source = path.join(root, file);
-  const target = path.join(dist, file);
 
   if (!fs.existsSync(source)) {
     throw new Error(`Arquivo publico nao encontrado: ${file}`);
   }
 
-  fs.copyFileSync(source, target);
+  fs.copyFileSync(source, path.join(dist, file));
+  fs.copyFileSync(source, path.join(publicDir, file));
 }
 
-console.log(`Site preparado para publicacao em ${dist}`);
+console.log(`Site preparado para publicacao em ${publicDir} e ${dist}`);

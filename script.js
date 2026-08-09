@@ -90,6 +90,86 @@ const toolPreviews = {
     problem: "O dimensionamento depende de informações dispersas sobre cabos, ocupação e critérios.",
     process: "A ferramenta reúne os dados relevantes e aplica as regras configuradas para a análise.",
     result: "Resultado estruturado para conferência e decisão do projetista."
+  },
+  xyz: {
+    tech: "DYNAMO · COORDENADAS",
+    title: "Instrumentos por XYZ",
+    summary: "Fluxo didático para criar ou posicionar instrumentos a partir de coordenadas e dados estruturados.",
+    problem: "Inserir instrumentos manualmente em grandes áreas aumenta retrabalho e dificulta conferir posição, TAG e elevação.",
+    process: "A rotina lê uma base de dados, interpreta coordenadas e aplica regras para posicionar elementos no modelo.",
+    result: "Instrumentos posicionados com lógica de dados, prontos para revisão técnica e documentação."
+  },
+  excelRevit: {
+    tech: "DYNAMO · EXCEL",
+    title: "Integração Excel Revit",
+    summary: "Conexão entre planilhas e modelo para importar, revisar e atualizar informações com mais consistência.",
+    problem: "Planilhas e modelo costumam evoluir separados, criando divergência entre lista, planta e parâmetros.",
+    process: "O fluxo cruza chaves, valida colunas e mostra como transformar Excel em entrada controlada de automação.",
+    result: "Dados mais rastreáveis e um caminho claro para atualizar o modelo sem retrabalho manual."
+  },
+  coordenadas: {
+    tech: "DYNAMO · LOCALIZAÇÃO",
+    title: "Coordenadas, grid e elevação",
+    summary: "Conjunto de rotinas para preencher informações de localização dos elementos do projeto.",
+    problem: "Sem coordenadas, grid e elevação bem preenchidos, listas e conferências perdem valor técnico.",
+    process: "A automação lê a posição dos elementos, relaciona com referências do projeto e grava parâmetros úteis.",
+    result: "Tabelas mais completas e elementos com informações de localização prontas para revisão."
+  },
+  buscador: {
+    tech: "DYNAMO · INTERFACE",
+    title: "Buscador de elementos",
+    summary: "Prévia de uma evolução das rotinas para ferramentas com interface e filtros de consulta.",
+    problem: "Encontrar elementos específicos em modelos grandes pode tomar tempo e depender de filtros manuais.",
+    process: "A ferramenta organiza critérios de busca, filtra elementos e aproxima o usuário de uma interface dedicada.",
+    result: "Consulta mais rápida de informações e um exemplo de caminho entre Dynamo, formulários e C#."
+  },
+  documentos: {
+    tech: "EXCEL · CONTROLE",
+    title: "Controle de documentos",
+    summary: "Fluxo para organizar documentos, revisões, status e rastreabilidade de emissão.",
+    problem: "Emissões técnicas exigem controle de revisão, status e consistência entre arquivos e listas.",
+    process: "A rotina estrutura os dados em planilha e ajuda a padronizar consulta, atualização e conferência.",
+    result: "Controle mais claro do pacote de documentos e apoio à gestão técnica do projeto."
+  },
+  dwg: {
+    tech: "PYREVIT · EXPORTAÇÃO",
+    title: "Exportar DWG instrumentação",
+    summary: "Automação para padronizar exportações e reduzir ajustes repetitivos na entrega em CAD.",
+    problem: "Exportar vistas uma a uma aumenta erro de configuração, nomes fora do padrão e retrabalho.",
+    process: "A ferramenta organiza vistas, parâmetros e regras de saída para gerar arquivos com mais padrão.",
+    result: "Exportações mais consistentes e melhor controle no fechamento das plantas."
+  },
+  extratorE3d: {
+    tech: "NAVISWORKS · E3D",
+    title: "Extrator de conexões E3D",
+    summary: "Fluxo para transformar varreduras e conectividade do ambiente industrial em dados analisáveis.",
+    problem: "Informações de conexão podem ficar escondidas no modelo e difíceis de usar em estudos externos.",
+    process: "O extrator converte dados de conectividade em CSV para análise, testes e preparação de rotas.",
+    result: "Base estruturada para investigar caminhos, ligações e relações entre elementos."
+  },
+  roteadorE3d: {
+    tech: "NAVISWORKS · ROTAS",
+    title: "Roteador E3D",
+    summary: "Protótipo visual para estudar caminhos entre elementos usando grafos e regras de conectividade.",
+    problem: "Escolher um caminho técnico entre pontos exige entender alternativas e restrições do modelo.",
+    process: "A rotina transforma conexões em grafo, testa vizinhanças e apresenta uma rota possível para análise.",
+    result: "Uma visão didática de roteamento para apoiar estudos com Navisworks, E3D e dados."
+  },
+  autolisp: {
+    tech: "AUTOCAD · LISP",
+    title: "Rotina AutoLISP didática",
+    summary: "Produto de entrada para ensinar uma automação simples de tags e produtividade no AutoCAD.",
+    problem: "Muitos profissionais querem começar a automatizar, mas pulam direto para soluções complexas.",
+    process: "O workbook ensina uma rotina pequena, explicada passo a passo, com exercício e desafio final.",
+    result: "Primeira automação funcional e uma ponte natural para Dynamo, Revit e ferramentas maiores."
+  },
+  iaRevit: {
+    tech: "IA · REVIT",
+    title: "Revit com ChatGPT",
+    summary: "Módulo para usar inteligência artificial como apoio no raciocínio, criação e revisão de automações.",
+    problem: "A IA ajuda bastante, mas sem método ela pode gerar scripts frágeis ou fora da realidade do projeto.",
+    process: "O aluno aprende a formular prompts técnicos, validar respostas e transformar ideias em testes controlados.",
+    result: "Uso mais consciente da IA para acelerar estudo, documentação e desenvolvimento de ferramentas."
   }
 };
 
@@ -98,6 +178,7 @@ const toolDialog = document.querySelector("#tool-dialog");
 document.querySelectorAll(".tool-preview").forEach((button) => {
   button.addEventListener("click", () => {
     const preview = toolPreviews[button.dataset.tool];
+    if (!preview) return;
     document.querySelector("#tool-dialog-tech").textContent = preview.tech;
     document.querySelector("#tool-dialog-title").textContent = preview.title;
     document.querySelector("#tool-dialog-summary").textContent = preview.summary;

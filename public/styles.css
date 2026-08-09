@@ -143,6 +143,7 @@ h1 em { color: var(--cyan); font-style: normal; }
 .tool-card small { margin-top: auto; color: var(--blue); font: 8px var(--mono); letter-spacing: .08em; }
 .tool-card h3 { margin: 10px 0; font-size: 17px; line-height: 1.25; letter-spacing: -.025em; }
 .tool-card p { margin-bottom: 0; color: #69767e; font-size: 10px; line-height: 1.7; }
+.tool-status { margin-top: 18px; width: max-content; max-width: 100%; padding: 6px 8px; color: #40515c; background: #eef3f6; border: 1px solid var(--line); font: 700 7px var(--mono); letter-spacing: .08em; }
 .tool-preview { margin-top: 22px; padding: 12px 0 0; display: flex; justify-content: space-between; color: var(--ink); background: none; border: 0; border-top: 1px solid var(--line); cursor: pointer; font: 700 9px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
 .tool-preview span { color: var(--orange); font-size: 14px; }
 .tools-note { max-width: 700px; margin: 25px 0 0; color: #7b878e; font: 8px var(--mono); line-height: 1.7; letter-spacing: .05em; }
