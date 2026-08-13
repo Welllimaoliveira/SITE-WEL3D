@@ -1,0 +1,61 @@
+WELTEC3D - MANUAL DE INSTALACAO
+Gerador de PDF Plantas para Revit / pyRevit
+
+VERSAO
+1.0.0
+
+DESCRICAO
+O Gerador de PDF Plantas e uma ferramenta gratuita da Weltec3D para gerar folhas PDF por planta e por caixas de escopo, com pre-visualizacao e escolha de carimbo.
+
+REQUISITOS
+- Autodesk Revit compativel com pyRevit.
+- pyRevit instalado e funcionando.
+- Permissao para gravar na pasta do usuario:
+  %APPDATA%\pyRevit\Extensions
+
+INSTALACAO
+1. Feche o Revit antes de instalar.
+2. Execute o instalador:
+   Weltec3D_GeradorPDFPlantas_Setup_v1.0.0.exe
+3. Aguarde a conclusao.
+4. Abra o Revit.
+5. Se a aba Weltec3D nao aparecer, clique em pyRevit > Reload ou reinicie o Revit.
+
+ONDE A FERRAMENTA FICA
+Apos instalar, o botao deve aparecer em:
+Weltec3D > Automacao > Gerar PDF Plantas
+
+PASTA INSTALADA
+%APPDATA%\pyRevit\Extensions\Weltec3D.extension
+
+ARQUIVOS INSTALADOS
+- Botao pyRevit Gerar PDF Plantas.
+- DLL C# A1.GeradorPdfPlantas.
+- Dependencias necessarias da ferramenta.
+
+COMO USAR
+1. Abra um modelo no Revit.
+2. Va ate a aba Weltec3D.
+3. Clique em Gerar PDF Plantas.
+4. Escolha as plantas, caixas de escopo e configuracoes solicitadas.
+5. Gere os PDFs e revise a saida.
+
+SOLUCAO DE PROBLEMAS
+Se o botao nao aparecer:
+- Reinicie o Revit.
+- Use pyRevit > Reload.
+- Confirme se a extensao esta na pasta:
+  %APPDATA%\pyRevit\Extensions\Weltec3D.extension
+
+Se aparecer erro de DLL:
+- Feche o Revit.
+- Execute o instalador novamente.
+- Abra o Revit e teste.
+
+Se o erro persistir:
+- Entre em contato com a Weltec3D pelo WhatsApp:
+  +55 41 98433-0694
+
+OBSERVACAO
+Esta ferramenta e gratuita, mas deve ser distribuida somente pelos canais oficiais da Weltec3D.
+
