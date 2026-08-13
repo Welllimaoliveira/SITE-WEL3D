@@ -1,0 +1,60 @@
+WELTEC3D - MANUAL DE INSTALACAO
+Copiar Propriedades para Revit / pyRevit
+
+VERSAO
+1.0.0
+
+DESCRICAO
+O Copiar Propriedades e uma ferramenta gratuita da Weltec3D para acelerar a copia de propriedades e dados entre elementos no Revit.
+
+REQUISITOS
+- Autodesk Revit compativel com pyRevit.
+- pyRevit instalado e funcionando.
+- Permissao para gravar na pasta do usuario:
+  %APPDATA%\pyRevit\Extensions
+
+INSTALACAO
+1. Feche o Revit antes de instalar.
+2. Execute o instalador:
+   Weltec3D_CopiarPropriedades_Setup_v1.0.0.exe
+3. Aguarde a conclusao.
+4. Abra o Revit.
+5. Se a aba Weltec3D nao aparecer, clique em pyRevit > Reload ou reinicie o Revit.
+
+ONDE A FERRAMENTA FICA
+Apos instalar, o botao deve aparecer em:
+Weltec3D > Automacao > Copiar Propriedades
+
+PASTA INSTALADA
+%APPDATA%\pyRevit\Extensions\Weltec3D.extension
+
+ARQUIVOS INSTALADOS
+- Botao pyRevit Copiar Propriedades.
+- DLL C# CarregamentoDA.CopiarPropriedades.
+- Dependencias necessarias da ferramenta.
+
+COMO USAR
+1. Abra um modelo no Revit.
+2. Va ate a aba Weltec3D.
+3. Clique em Copiar Propriedades.
+4. Siga as instrucoes da janela da ferramenta.
+
+SOLUCAO DE PROBLEMAS
+Se o botao nao aparecer:
+- Reinicie o Revit.
+- Use pyRevit > Reload.
+- Confirme se a extensao esta na pasta:
+  %APPDATA%\pyRevit\Extensions\Weltec3D.extension
+
+Se aparecer erro de DLL:
+- Feche o Revit.
+- Execute o instalador novamente.
+- Abra o Revit e teste.
+
+Se o erro persistir:
+- Entre em contato com a Weltec3D pelo WhatsApp:
+  +55 41 98433-0694
+
+OBSERVACAO
+Esta ferramenta e gratuita, mas deve ser distribuida somente pelos canais oficiais da Weltec3D.
+

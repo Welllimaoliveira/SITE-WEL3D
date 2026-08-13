@@ -1,0 +1,13 @@
+{
+  "builtin": "False",
+  "default_enabled": "True",
+  "type": "extension",
+  "rocket_mode_compatible": "True",
+  "name": "Weltec3D",
+  "description": "Ferramentas gratuitas e comerciais da Weltec3D para Revit e automacao de projetos.",
+  "author": "Weltec3D",
+  "url": "https://weltec3d-site.vercel.app",
+  "website": "https://weltec3d-site.vercel.app",
+  "image": "",
+  "dependencies": []
+}
