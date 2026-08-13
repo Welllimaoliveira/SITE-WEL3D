@@ -174,8 +174,10 @@ h1 em { color: var(--cyan); font-style: normal; }
 .app-media { position: relative; min-height: 430px; padding: 22px; display: grid; place-items: center; background: radial-gradient(circle at 20% 20%, rgba(57,169,219,.22), transparent 32%), linear-gradient(135deg, #0b1218, #172632); border-right: 1px solid var(--dark-line); }
 .app-media video { width: 100%; height: auto; max-height: 520px; display: block; background: #06090c; border: 1px solid rgba(255,255,255,.12); box-shadow: 0 22px 55px rgba(0,0,0,.28); }
 .app-badge { position: absolute; top: 22px; left: 22px; z-index: 2; padding: 9px 11px; color: #101820; background: var(--orange); font: 800 8px var(--mono); letter-spacing: .1em; }
+.app-badge.free { background: #70bd93; }
 .app-content { padding: 42px; display: flex; flex-direction: column; }
 .app-logo { width: 78px; height: 78px; margin-bottom: 35px; display: grid; place-items: center; color: white; background: linear-gradient(135deg, var(--blue), var(--cyan)); border: 1px solid rgba(57,169,219,.7); box-shadow: inset 0 0 0 8px rgba(255,255,255,.12); font: 800 22px var(--mono); }
+.app-logo.free-logo { color: #101820; background: linear-gradient(135deg, #70bd93, #b7e8cc); border-color: rgba(112,189,147,.7); }
 .app-content small { color: var(--cyan); font: 8px var(--mono); letter-spacing: .1em; }
 .app-content h3 { margin: 12px 0 18px; font-size: 34px; line-height: 1.05; letter-spacing: -.045em; }
 .app-content p { color: #9aaaaf; font-size: 12px; line-height: 1.8; }
@@ -185,6 +187,7 @@ h1 em { color: var(--cyan); font-style: normal; }
 .app-list li { padding: 13px 0; color: #82929b; border-bottom: 1px solid var(--dark-line); font-size: 11px; }
 .app-actions { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 10px; }
 .app-actions .button-outline { color: white; border-color: rgba(255,255,255,.2); }
+.button-disabled { opacity: .75; color: #82929b; background: rgba(255,255,255,.06); border: 1px solid var(--dark-line); cursor: not-allowed; }
 .whatsapp-button::before { content: "☎"; width: 18px; height: 18px; margin-right: 8px; display: inline-grid; place-items: center; color: #101820; background: #70bd93; border-radius: 999px; font-size: 11px; }
 .instructor-section { background: var(--paper); }
 .instructor-layout { display: grid; grid-template-columns: .8fr 1.2fr; gap: 90px; align-items: center; }
