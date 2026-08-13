@@ -13,6 +13,10 @@ const publicFiles = [
   "ecossistema.css"
 ];
 
+const assetDirectories = [
+  "assets"
+];
+
 for (const directory of [dist, publicDir]) {
   fs.rmSync(directory, { recursive: true, force: true });
   fs.mkdirSync(directory, { recursive: true });
@@ -27,6 +31,14 @@ for (const file of publicFiles) {
 
   fs.copyFileSync(source, path.join(dist, file));
   fs.copyFileSync(source, path.join(publicDir, file));
+}
+
+for (const directory of assetDirectories) {
+  const source = path.join(root, directory);
+  if (!fs.existsSync(source)) continue;
+
+  fs.cpSync(source, path.join(dist, directory), { recursive: true });
+  fs.cpSync(source, path.join(publicDir, directory), { recursive: true });
 }
 
 console.log(`Site preparado para publicacao em ${publicDir} e ${dist}`);
