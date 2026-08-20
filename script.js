@@ -21,10 +21,25 @@ document.querySelectorAll(".faq-list details").forEach((detail) => {
 document.querySelector("#waitlist-form").addEventListener("submit", (event) => {
   event.preventDefault();
   const note = document.querySelector("#form-note");
-  note.textContent = "Cadastro demonstrativo enviado. A integração real será configurada depois.";
+  note.textContent = "Cadastro demonstrativo recebido. A integração com lista/e-mail será configurada na próxima etapa.";
   note.style.color = "#70bd93";
   event.target.reset();
 });
+
+const communityForm = document.querySelector("#community-form");
+if (communityForm) {
+  communityForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const email = document.querySelector("#community-email").value.trim();
+    const question = document.querySelector("#community-question").value.trim();
+    const subject = encodeURIComponent("Dúvida para a comunidade WellTec3D");
+    const body = encodeURIComponent(`E-mail: ${email}\n\nDúvida ou sugestão:\n${question}`);
+    window.location.href = `mailto:welltec3d@outlook.com?subject=${subject}&body=${body}`;
+    const note = document.querySelector("#community-note");
+    note.textContent = "Abri seu e-mail com a mensagem pronta para enviar.";
+    note.style.color = "#176b9c";
+  });
+}
 
 const toolPreviews = {
   distribuidores: {
